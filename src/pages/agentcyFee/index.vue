@@ -1,0 +1,43 @@
+<template>
+  <el-container>
+    <el-header height="114px">
+      <home-header></home-header>
+    </el-header>
+    <el-container class="main-wrapper">
+      <!-- <el-aside width="200px">Aside</el-aside> -->
+      <el-main>
+        <Containter></Containter>
+        <!-- <home-footer></home-footer> -->
+      </el-main>
+    </el-container>
+  </el-container>
+</template>
+<script>
+import HomeHeader from '@/components/HeaderOrder'
+import HomeFooter from '@/components/Footer'
+import Containter from './components/table.vue'
+
+export default {
+  components: {
+    HomeHeader,
+    HomeFooter,
+    Containter
+  },
+  props: {},
+  data () {
+    return {}
+  },
+  watch: {},
+  computed: {},
+  methods: {},
+  created () {
+    this.$store.state.activeIndex = 'agentcyFee'
+  },
+  mounted () {
+
+  }
+}
+</script>
+<style>
+
+</style>
